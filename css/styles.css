@@ -18,6 +18,12 @@ section.top-page {
 header.header img {
     width : 150px;
 }
+/* page de bienvenue (landing-page) */
+.big-title {
+    color: white;
+    font-size: 80px;
+    padding: 20px 50px;
+}
 
 /* menu de navigation */
 
