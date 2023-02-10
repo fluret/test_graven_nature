@@ -5,4 +5,11 @@ body {
 /* configuration de l'en-tête */
 section.top-page {
     background : url(../images/bg.jpg);
+    background-size: cover;
+    height: 80vh;
 }
+header.header img {
+    width : 150px;
+}
+
+/* menu de navigation */
