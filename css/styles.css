@@ -1,0 +1,8 @@
+/* Configuration de la page */
+body {
+    margin : 0 auto;
+}
+/* configuration de l'en-tête */
+section.top-page {
+    background : url(../images/bg.jpg);
+}
