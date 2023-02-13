@@ -1,4 +1,11 @@
 /* Configuration de la page */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+* {
+    font-family: 'Monserrat';
+}
+
 body {
     margin : 0 auto;
 }
@@ -19,17 +26,29 @@ header.header img {
     width : 150px;
 }
 /* page de bienvenue (landing-page) */
+.landing-page {
+    padding: 20px 50px;
+}
 .big-title {
     color: white;
     font-size: 80px;
-    padding: 20px 50px;
+    font-family: 'Abril Fatface', Cursive;
+    font-weight: 100;
+}
+
+.scroll-down {
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    bottom: 120px;
 }
 
 /* menu de navigation */
 
 nav.nav {
     display : flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: space-evenly;
     list-style: none;
     /* background-color : red; */
     width: 400px;
@@ -38,4 +57,109 @@ nav.nav {
 
 nav.nav li {
     color : white;
+}
+
+/* Services */
+
+.services {
+    display : flex;
+    justify-content: space-between;
+    /* background-color: red; */
+    margin : 50px;
+}
+
+.service-item {
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: yellow; */
+}
+.delivery-icon {
+    font-size : 50px;
+    color: #ADD981;
+}
+
+.service-details {
+    font-weight: 600;
+    width : 150px;
+    text-align: center;
+}
+
+/* best items */
+
+.section-title {
+    font-size: 50px;
+    font-weight: 100;
+    position: relative;
+    font-family: 'Abril FatFace', cursive;
+}
+
+/* .section-title::before {
+    content:"hey";
+} */
+
+.section-title::before {
+    content:"";
+    position: absolute;
+    background-color: #ADD981;
+    width:50px;
+    height:7px;
+    bottom: 0;
+}
+
+.bests-items {
+    margin:100px;
+}
+
+.best-plants {
+    /* background-color: red; */
+    min-height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.plant-box {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    min-width: 350px;
+    height: 500px;
+    flex:1;
+}
+
+.plant1 {
+    background-image: url(../images/nos_meilleures_ventes/1.jpg);
+}
+
+.plant2 {
+    background-image: url(../images/nos_meilleures_ventes/2.jpg);
+}
+
+.plant3 {
+    background-image: url(../images/nos_meilleures_ventes/3.jpg);
+}
+
+.plant4 {
+    background-image: url(../images/nos_meilleures_ventes/4.jpg);
+}
+
+.plant-details {
+    position: absolute;
+    width:100%;
+    bottom: 0;
+    background-color: #FFFFFFDF;
+    padding: 5px 20px;
+}
+
+.plant-name {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 3px;
+}
+
+.plant-price {
+    color: #ADD981;
+    line-height: 3px;
+    font-size: 16px;
+    font-weight: 900;
 }

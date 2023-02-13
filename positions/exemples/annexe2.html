@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+
+<head>
+    <title>OpenWeb - Initiation au positionnement CSS - Page test</title>
+    <link rel="stylesheet" href="annexe2.css">
+</head>
+
+<body>
+    <div class="page">
+        <h1>OpenWeb - Positionnement <code>float</code> - Exemples</h1>
+        <p>Cette page illustre diff&eacute;rents exemples utilis&eacute;s dans <a href="/articles/initiation_float/">Initiation au Positionnement <acronym>CSS</acronym>&nbsp;: 2.position float</a>.</p>
+        <hr />
+        <h2 id="ex1">Bo&icirc;te flottante simple</h2>
+        <p>Code <acronym>HTML</acronym>:</p>
+        <pre>
+        &lt;p class="<var>jaune</var>"&gt;<var>Une bo&icirc;te jaune flottant</var>&lt;/p&gt;
+        &lt;p class="<var>verte</var>"&gt;<var>Une bo&icirc;te verte dot&eacute; d'un contenu plus long...</var>&lt;/p&gt;
+        </pre>
+        <p>Code <acronym>CSS</acronym>:</p>
+        <pre>
+        .jaune {
+        background-color: <var>#ffff00</var>;
+        float: right;
+        width: <var>100px</var>;
+        margin: 0;
+        }
+        .verte {
+        background-color: <var>#00ff00</var>;
+        }
+        </pre>
+        <p>R&eacute;sultat&nbsp;:</p>
+        <p class="jaune4">Une bo&icirc;te jaune flottant</p>
+        <p class="verte4">Une bo&icirc;te verte dot&eacute; d'un contenu plus long...Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.</p>
+        
+        <h2 id="ex2">Bo&icirc;te flottante d&eacute;bordante</h2>
+        <p>Code <acronym>HTML</acronym>:</p>
+        <p class="jaune">Une bo&icirc;te jaune flottant dot&eacute; d'un contenu plus long...</p>
+        <p class="verte">Une bo&icirc;te verte</p>
+        <p>Code <acronym>CSS</acronym>:</p>
+        <pre>
+        .jaune {
+        background-color: <var>#ffff00</var>;
+        float: right;
+        width: <var>100px</var>;
+        margin: 0;
+        }
+        .verte {
+        background-color: <var>#00ff00</var>;
+        }
+        </pre>
+        <p>R&eacute;sultat&nbsp;:</p>
+        <p class="jaune4">Une bo&icirc;te jaune flottant dot&eacute; d'un contenu plus long...Lorem ipsum dolor sit amet</p>
+        <p class="verte4">Une bo&icirc;te verte</p>
+        
+        <h2 id="ex3">Bo&icirc;te flottante avec <span xml:lang="en">spacer</span></h2>
+        <p>Code <acronym>HTML</acronym>:</p>
+        <pre>
+        &lt;div class="<var>verte5</var>"&gt;
+        &lt;p class="<var>jaune5</var>"&gt;<var>Une bo&icirc;te jaune flottant dot&eacute; d'un contenu plus long...</var>&lt;/p&gt;
+        &lt;p&gt;<var>Une bo&icirc;te verte</var>&lt;/p&gt;
+        &lt;div class="<var>spacer</var>"&gt;&nbsp;&lt;/div&gt;
+        &lt;/div&gt;
+        </pre>
+        <p>Code <acronym>CSS</acronym>:</p>
+        <pre>
+        .jaune {
+        background-color: #ffff00;
+        float: right;
+        width: 100px;
+        text-align: center;
+        margin: 0;
+        }
+        .verte {
+        width: 100%;
+        background-color: #00ff00;
+        }
+        .spacer {
+        clear: both;
+        }
+        </pre>
+        <p>R&eacute;sultat&nbsp;:</p>
+        <div class="verte5">
+        <p class="jaune5">Une bo&icirc;te jaune flottant dot&eacute; d'un contenu plus long...</p>
+        <p>Une bo&icirc;te verte</p>
+        <div class="spacer">&nbsp;</div>
+        </div>
+        
+        <h2 id="ex4">Vignettes flottantes</h2>
+        <p>Code <acronym>HTML</acronym>:</p>
+        <pre>
+        &lt;div class="conteneur"&gt;
+        &lt;p class="<var>flottante</var>"&gt;<var>bo&icirc;te verte 1</var>&lt;/p&gt;
+        &lt;p class="<var>flottante</var>"&gt;<var>bo&icirc;te verte 2</var>&lt;/p&gt;
+        &lt;p class="<var>flottante</var>"&gt;<var>bo&icirc;te verte 3</var>&lt;/p&gt;
+        <var>...etc...</var>
+        &lt;div class="<var>spacer</var>"&gt;<var>&amp;nbsp;</var>&lt;/div&gt;
+        &lt;/div&gt;
+        </pre>
+        <p>Code <acronym>CSS</acronym>:</p>
+        <pre>
+        .flottante {
+        background-color: #00ff00;
+        margin: 2px;
+        float: left;
+        width: 100px;
+        text-align: center;
+        }
+        .conteneur {
+        width: 100%;
+        }
+        .spacer {
+        clear: both;
+        }
+        </pre>
+        <p>R&eacute;sultat&nbsp;:</p>
+        <div class="conteneur">
+        <p class="flottante">bo&icirc;te verte<br />1</p>
+        <p class="flottante">bo&icirc;te verte<br />2</p>
+        <p class="flottante">bo&icirc;te verte<br />3</p>
+        <p class="flottante">bo&icirc;te verte<br />4</p>
+        <p class="flottante">bo&icirc;te verte<br />5</p>
+        <p class="flottante">bo&icirc;te verte<br />6</p>
+        <p class="flottante">bo&icirc;te verte<br />7</p>
+        <p class="flottante">bo&icirc;te verte<br />8</p>
+        <p class="flottante">bo&icirc;te verte<br />9</p>
+        <p class="flottante">bo&icirc;te verte<br />10</p>
+        <div class="spacer">&nbsp;</div>
+        </div>
+        
+        
+        <h2 id="ex5">Bo&icirc;te flottante et s&eacute;parateur <code>hr</code></h2>
+        <p>Code <acronym>HTML</acronym>:</p>
+        <pre>
+        &lt;p class="<var>jaune</var>"&gt;<var>Une bo&icirc;te jaune flottant dot&eacute; d'un contenu plus long...</var>&lt;/p&gt;
+        &lt;p class="<var>verte</var>"&gt;<var>Une bo&icirc;te verte</var>
+        &lt;hr&gt;
+        &lt;/p&gt;
+        </pre>
+        <p>Code <acronym>CSS</acronym>:</p>
+        <pre>
+        .jaune {
+        background-color: <var>#ffff00</var>;
+        float: right;
+        width: <var>100px</var>;
+        margin: 0;
+        }
+        .verte {
+        background-color: <var>#00ff00</var>;
+        }
+        hr {
+        clear: both;
+        }
+        </pre>
+        <p>R&eacute;sultat&nbsp;:</p>
+        <div class="verte5">
+        <p class="jaune5">Une bo&icirc;te jaune flottant dot&eacute; d'un contenu plus long...</p>
+        <p>Une bo&icirc;te verte</p>
+        <hr class="spacer"/>
+        </div>
+        
+        <h2 id="ex6">Bo&icirc;te flottante et s&eacute;parateur <code>hr</code> invisible</h2>
+        <p>Code <acronym>HTML</acronym>:</p>
+        <pre>
+        &lt;p class="<var>jaune</var>"&gt;<var>Une bo&icirc;te jaune flottant dot&eacute; d'un contenu plus long...</var>&lt;/p&gt;
+        &lt;p class="<var>verte</var>"&gt;<var>Une bo&icirc;te verte</var>
+        &lt;hr&gt;
+        &lt;/p&gt;
+        </pre>
+        <p>Code <acronym>CSS</acronym>:</p>
+        <pre>
+        .jaune {
+        background-color: <var>#ffff00</var>;
+        float: right;
+        width: <var>100px</var>;
+        margin: 0;
+        }
+        .verte {
+        background-color: <var>#00ff00</var>;
+        }
+        hr {
+        clear: both;
+        visibility: hidden;
+        }
+        </pre>
+        <p>R&eacute;sultat&nbsp;:</p>
+        <div class="verte5">
+        <p class="jaune5">Une bo&icirc;te jaune flottant dot&eacute; d'un contenu plus long...</p>
+        <p>Une bo&icirc;te verte</p>
+        <hr class="spacerhr" />
+        </div>
+        
+        <h2 id="ex7">Vignettes flottantes et s&eacute;parateur <code>hr</code> invisible</h2>
+        <p>Code <acronym>HTML</acronym>:</p>
+        <pre>
+        &lt;div class="conteneur"&gt;
+        &lt;p class="<var>flottante</var>"&gt;<var>bo&icirc;te verte 1</var>&lt;/p&gt;
+        &lt;p class="<var>flottante</var>"&gt;<var>bo&icirc;te verte 2</var>&lt;/p&gt;
+        &lt;p class="<var>flottante</var>"&gt;<var>bo&icirc;te verte 3</var>&lt;/p&gt;
+        <var>...etc...</var>
+        &lt;hr /&gt;
+        &lt;/div&gt;
+        </pre>
+        <p>Code <acronym>CSS</acronym>:</p>
+        <pre>
+        .flottante {
+        background-color: #00ff00;
+        margin: 2px;
+        float: left;
+        width: 100px;
+        text-align: center;
+        }
+        .conteneur {
+        width: 100%;
+        }
+        hr {
+        clear: both;
+        visibility: hidden;
+        }
+        </pre>
+        <p>R&eacute;sultat&nbsp;:</p>
+        <div class="conteneur">
+        <p class="flottante">bo&icirc;te verte<br />1</p>
+        <p class="flottante">bo&icirc;te verte<br />2</p>
+        <p class="flottante">bo&icirc;te verte<br />3</p>
+        <p class="flottante">bo&icirc;te verte<br />4</p>
+        <p class="flottante">bo&icirc;te verte<br />5</p>
+        <p class="flottante">bo&icirc;te verte<br />6</p>
+        <p class="flottante">bo&icirc;te verte<br />7</p>
+        <p class="flottante">bo&icirc;te verte<br />8</p>
+        <p class="flottante">bo&icirc;te verte<br />9</p>
+        <p class="flottante">bo&icirc;te verte<br />10</p>
+        <hr class="spacerhr" />
+        </div>
+        </div>
+        <div class="ours">
+        <p><a href="/" title="OpenWeb Group">Accueil OpenWeb</a> | <a href="/openwebgroup/plan/" title="Carte du site OpenWeb">Plan du site</a> | <a href="/openwebgroup/licence/">Conditions de réutilisation</a></p>
+        <p>Cette page est valide <a href="http://validator.w3.org/" title="Validation W3c">Xhtml</a> et <a href="http://jigsaw.w3.org/css-validator/" title="Validation W3c">Css</a></p>
+        <p>Ce site s'affiche mieux dans un navigateur conforme aux standards, <a href="/openwebgroup/demarche_standard/">voici pourquoi</a></p>
+        </div>
+    
+</body>
+
+</html>

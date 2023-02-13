@@ -1,0 +1,122 @@
+body {
+    background-color: #336699;
+    font-family: "Trebuchet MS", Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    margin: 2em 1%;
+    padding: 0;
+    }
+    .page {
+    background-color: #f5f8fc;
+    border: 3px solid #000000;
+    padding: 1em;
+    }
+    .ours {
+    background-color: #ffffff;
+    border: 3px solid #000000;
+    padding: 1em;
+    margin-top: 1em;
+    }
+    h1,h2,h3 {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        }
+        h2 {
+        background-color: transparent;
+        color: #036;
+        font-size: 1.3em;
+        }
+        h3 {
+        background-color: transparent;
+        color: #6699cc;
+        font-size: small;
+        }
+        code,pre {
+        color: #390;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 1em;
+        }
+        pre {
+        border-left:5px solid #a2c2e1;
+        padding:0.5em 1em;
+        margin-left:2em;
+        }
+        .jaune1 {background-color: #ffff00;}
+        .verte1 {background-color: #00ff00;}
+        .jaune2 {
+        position: relative;
+        bottom: 5px;
+        background-color: #ffff00;
+        }
+        .jaune3 {
+        position: relative;
+        bottom: 5px;
+        left: 25px;
+        background-color: #ffff00;
+        }
+        .jaune4 {
+        background-color: #ffff00;
+        float: right;
+        width: 100px;
+        margin: 0;
+        }
+        .verte4 {
+        background-color: #00ff00;
+        padding: 0.5em;
+        }
+        .jaune5 {
+        background-color: #ffff00;
+        float: right;
+        width: 100px;
+        text-align: center;
+        margin: 0;
+        }
+        .verte5 {
+        width: 100%;
+        background-color: #00ff00;
+        }
+        .spacer {
+        clear: both;
+        }
+        .flottante {
+        background-color: #00ff00;
+        margin: 2px;
+        float: left;
+        width: 100px;
+        text-align: center;
+        }
+        .conteneur {
+        width: 100%;
+        }
+        .spacerhr {
+        clear: both;
+        visibility: hidden;
+        }
+        .verte6 {
+        position: relative;
+        background-color: #00ff00;
+        width: 15em;
+        }
+        .jaune6 {
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        background-color: #ffff00;
+        }
+        .verte7 {
+        position: relative;
+        background-color: #00ff00;
+        width: 15em;
+        padding-top: 3em;
+        }
+        .jaune8 {
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        background-color: #ffff00;
+        width: 4em;
+        }
+        .verte8 {
+        position: relative;
+        background-color: #00ff00;
+        width: 15em;
+        padding-right: 5em;
+        }

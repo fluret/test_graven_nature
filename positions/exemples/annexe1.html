@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+
+<head>
+    <title>OpenWeb - Initiation au positionnement CSS - Page test</title>
+    <link rel="stylesheet" href="annexe1.css">
+</head>
+
+<body>
+    <div class="page">
+        <h1>OpenWeb - Positionnement flux et relatif - Exemples</h1>
+        <h2 id="ex1">Bo&icirc;tes de type bloc en flux normal</h2>
+
+        <p>Code <acronym>HTML</acronym>&nbsp;:</p>
+        <pre>
+    &lt;p class="rouge"&gt;<var>Une bo&icirc;te rouge</var>&lt;/p&gt;
+    &lt;p class="vert"&gt;<var>Une bo&icirc;te verte</var>&lt;/p&gt;
+</pre>
+        <p>Code <acronym>CSS</acronym>&nbsp;:</p>
+        <pre>
+    .rouge {background-color: <var>#ff9999</var>;}
+    .vert {background-color: <var>#99cc99</var>;}
+</pre>
+        <p>R&eacute;sultat&nbsp;:</p>
+        <p class="jaune1">Une bo&icirc;te jaune</p>
+        <p class="verte1">Une bo&icirc;te verte</p>
+
+        <h2 id="ex2">Bo&icirc;tes de type en-ligne en flux normal</h2>
+        <p>Code <acronym>HTML</acronym>&nbsp;:</p>
+    <pre>
+    &lt;p&gt;
+        &lt;span class="<var>rouge</var>"&gt;<var>Une bo&icirc;te rouge</var>&lt;/span&gt;
+        &lt;span class="<var>vert</var>"&gt;<var>Une bo&icirc;te verte</var>&lt;/span&gt;
+    &lt;/p&gt;
+    </pre>
+        <p>code <acronym>CSS</acronym>&nbsp;:</p>
+<pre>
+    p {border: 1px dotted #000000;}
+    .rouge {background-color: <var>#ff9999</var>;}
+    .vert {background-color: <var>#99cc99</var>;}
+</pre>
+        <p>R&eacute;sultat&nbsp;:</p>
+        <p>
+            <span class="jaune1">Une bo&icirc;te jaune</span>
+            <span class="verte1">Une bo&icirc;te verte</span>
+        </p>
+
+    <h2 id="ex3">Bo&icirc;te en position relative</h2>
+    <p>Code <acronym>HTML</acronym>:</p>
+    <pre>
+    &lt;p&gt;<var>Lorem</var>
+        &lt;span class="<var>jaune</var>"&gt;<var>bo&icirc;te en position relative</var>&lt;/span&gt;
+        ipsum dolor.
+    &lt;/p&gt;
+    </pre>
+        <p>Code <acronym>CSS</acronym>:</p>
+    <pre>
+    .jaune {
+        position: relative;
+        bottom: <var>5px</var>;
+        background-color: <var>#ffff00</var>;
+        }
+    </pre>
+        <p>R&eacute;sultat&nbsp;:</p>
+        <p>Lorem<span class="jaune2">bo&icirc;te en position relative</span> ipsum dolor.</p>
+
+        <h2 id="ex4">Bo&icirc;te en position relative avec chevauchement</h2>
+        <p>Code <acronym>HTML</acronym>:</p>
+        <pre>
+    &lt;p&gt;<var>Lorem</var>
+        &lt;span class="<var>jaune</var>"&gt;<var>bo&icirc;te en position relative</var>&lt;/span&gt;
+        ipsum dolor.
+    &lt;/p&gt;
+</pre>
+        <p>Code <acronym>CSS</acronym>:</p>
+        <pre>
+.jaune {
+    position: relative;
+    bottom: <var>5px</var>;
+    left: <var>3em</var>;
+    background-color: <var>#ffff00</var>;
+    }
+</pre>
+        <p>R&eacute;sultat&nbsp;:</p>
+        <p>Lorem<span class="jaune3">bo&icirc;te en position relative</span> ipsum dolor.</p>
+    </div>
+    
+</body>
+
+</html>

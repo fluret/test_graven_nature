@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_cours.css">
+    <title>Document</title>
+</head>
+<body>
+<h1>Position float</h1>
+    <p>
+        Une boîte flottante est <strong>retirée du flux normal</strong>, et placée le plus à droite (<code class="token">float: right</code>) ou le plus à gauche (<code class="token">float: left</code>) possible dans son conteneur. <strong>Le contenu suivant cette boîte flottante s'écoule le long de celle-ci</strong>, dans l'espace laissé libre.
+    </p>
+    <h2 id="fonctionnement">Le fonctionnement des flottants</h2>
+        <p>
+            Ajoutons aux styles précédents une règle de positionnement flottant à droite et une mesure de largeur (facultative, mais utile pour certains navigateurs) :
+        </p>
+
+        <p>En <acronym title="HyperText Markup Language" lang="en">HTML</acronym>:</p>
+    <pre>
+    &lt;p class="jaune"&gt;Une boîte jaune flottant&lt;/p&gt;
+    &lt;p class="verte"&gt;Une boîte verte doté d'un contenu plus long…&lt;/p&gt;
+    </pre>
+
+    <p>En <acronym>CSS</acronym>:</p>
+
+    <pre>
+    .jaune {
+        background-color: #ffff00;
+        float: right;
+        width: 100px;
+        margin: 0;
+        }
+    .verte {
+        background-color: #00ff00;
+        }
+    </pre>
+<p>Le résultat, illustré par la figure ci-dessous, peut être observé également dans <a href="/positions/exemples/annexe2.html#ex1">l'exemple 1</a>
+</p>
+<div>
+  <img src="/positions/img/ex5.gif" alt="Le texte de la boîte verte passe à la ligne à hauteur de la boîte jaune"/>
+</div>
+<p>Le navigateur <em>place</em> tout d'abord la boîte jaune, alignée sur le bord droit de cette partie de notre page, puis reprend le cours normal du flux dans l'espace laissé libre à sa gauche pour afficher la boîte verte. Le flux occupe tout l'espace disponible: la boîte verte reprend donc toute la largeur de la page sitôt <em>passée</em> la limite inférieure de la boîte flottante jaune.</p>
+
+<p>Dans les navigateurs n'appliquant pas la feuille de style (navigateurs texte ou non conformes aux standards…), la boîte flottante sera simplement inscrite en flux normal avant la boîte qui la suit.</p>
+<h3 id="deuxcolonnes">Première utilisation : une mise en page à deux colonnes</h3>
+<p>La combinaison de la position flottante et du flux permet de réaliser aisément une mise en page à deux colonnes (un contenu et un menu) :</p>
+<p>En <acronym>CSS</acronym> :</p>
+<pre>
+.content {
+float: left;
+width: 70%;
+}
+.menu {
+margin-left: 80%;
+border: 1px solid #000000;
+padding: 1em;
+}
+</pre>
+
+<p>Et en <acronym>HTML</acronym> :</p>
+<pre>
+…
+&lt;body&gt;
+&lt;div class="content"&gt;
+…
+&lt;/div&gt;
+
+&lt;div class="menu"&gt;
+&lt;ul&gt;
+&lt;li&gt;lien_1&lt;/li&gt;
+&lt;li&gt;lien_2&lt;/li&gt;
+&lt;li&gt;lien_3&lt;/li&gt;
+
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+</pre>
+
+</body>
+</html>
