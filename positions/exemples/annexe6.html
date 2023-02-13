@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+
+<head>
+    <title>Annexe 1</title>
+    <link rel="stylesheet" href="annexe6.css">
+</head>
+
+<body>
+    <div class="centre">
+        <h1>Exemple d'utilisation de la position absolue pour une mise en page à trois colonnes</h1>
+        
+        <h2>code <acronym>CSS</acronym>&nbsp;:</h2>
+        <pre>
+        .centre {
+            margin: <var>1em 25%</var>;
+            }
+        .gauche {
+            position: absolute;
+            top: <var>1em</var>;
+            left: <var>1%</var>;
+            width: <var>18%</var>;
+            }
+        .droite {
+            position: absolute;
+            top: <var>1em</var>;
+            right: <var>1%</var>;
+            width: <var>18%</var>;
+            }
+        </pre>
+        <h2>code <acronym>HTML</acronym>&nbsp;:</h2>
+        <pre>
+        &lt;body&gt;
+            &lt;div class="<var>centre</var>"&gt;
+                <var>...</var>
+            &lt;/div&gt;
+            &lt;div class="<var>gauche</var>"&gt;
+                <var>...</var>
+            &lt;/div&gt;
+            &lt;div class="<var>droite</var>"&gt;
+                <var>...</var>
+            &lt;/div&gt;
+        &lt;/body&gt;
+        </pre>
+        </div>
+        <div class="gauche">
+        <p>Menu</p>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vestibulum, mauris in porta placerat, risus lectus consequat urna, sit amet ultrices nulla nibh sed ex. Curabitur porta, lorem eget eleifend euismod, massa libero suscipit quam, vitae tempor tellus felis eu risus. Fusce sed turpis scelerisque velit tempor malesuada. Pellentesque in orci quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec quis ipsum ut diam tempor fringilla quis vitae leo. Ut luctus massa a dictum maximus.
+
+        Curabitur in fringilla tortor. Sed semper, lacus in consectetur placerat, urna elit blandit nisi, eu tempor odio mi non augue. Nunc euismod consectetur arcu eget tincidunt. Quisque fermentum at arcu et mattis. Nunc nec sapien vel sem fringilla ornare vel vel felis. Sed ut maximus dui. Suspendisse lobortis placerat sollicitudin. Duis commodo in massa tristique egestas. Nullam iaculis faucibus quam, ut auctor est efficitur eu. Donec scelerisque elit dolor, elementum aliquet erat bibendum quis. Nullam maximus sapien orci, vitae ullamcorper elit iaculis vel. Nulla ornare lacus ac porttitor cursus. Etiam tempus tempor urna, eget imperdiet dui ornare sed. Nam efficitur sapien non risus vestibulum, et scelerisque ipsum auctor. Cras non consequat tortor. Quisque non imperdiet mauris. </p>
+        </div>
+        
+        <div class="droite">
+        <p>Menu</p>
+        <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation nisl ut aliquip ex ea commodo consequat.</p>
+        </div>
+    
+</body>
+
+</html>

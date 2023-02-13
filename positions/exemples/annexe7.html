@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+
+<head>
+    <title>Annexe 1</title>
+    <link rel="stylesheet" href="annexe7.css">
+</head>
+
+<body>
+    <div class="page">
+        <h1>Exemple d'utilisation de la position fixe dans un menu</h1>
+        <p>Le code correspondant est&nbsp;:</p>
+        <p>En <acronym>CSS</acronym>&nbsp;:</p>
+        <pre>
+        .page {
+            width: <var>70%</var>;
+            border: <var>1px</var> solid <var>#000000</var>;
+            padding: <var>1em 1%</var>;
+            }
+        .menu {
+            position: absolute;
+            top: <var>2em</var>;
+            right: <var>1em</var>;
+            background-color: <var>#ffecce</var>;
+            border: <var>1px</var> solid <var>#666666</var>;
+            padding: <var>1em</var>;
+            width: <var>20%</var>;
+            }
+        html>body .menu {
+            position: fixed;
+            }
+        </pre>
+        <p>En <acronym>HTML</acronym>&nbsp;:</p>
+        <pre>
+        &lt;body&gt;
+            &lt;div class="<var>page</var>"&gt;
+                <var>...</var>
+            &lt;/div&gt;
+            &lt;div class="<var>menu</var>"&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;<var>lien_1</var>&lt;/li&gt;
+                    &lt;li&gt;<var>lien_2</var>&lt;/li&gt;
+                    &lt;li&gt;<var>lien_3</var>&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+        </pre>
+        
+        <div class="largeur">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vestibulum, mauris in porta placerat, risus lectus consequat urna, sit amet ultrices nulla nibh sed ex. Curabitur porta, lorem eget eleifend euismod, massa libero suscipit quam, vitae tempor tellus felis eu risus. Fusce sed turpis scelerisque velit tempor malesuada. Pellentesque in orci quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec quis ipsum ut diam tempor fringilla quis vitae leo. Ut luctus massa a dictum maximus.
+
+            Curabitur in fringilla tortor. Sed semper, lacus in consectetur placerat, urna elit blandit nisi, eu tempor odio mi non augue. Nunc euismod consectetur arcu eget tincidunt. Quisque fermentum at arcu et mattis. Nunc nec sapien vel sem fringilla ornare vel vel felis. Sed ut maximus dui. Suspendisse lobortis placerat sollicitudin. Duis commodo in massa tristique egestas. Nullam iaculis faucibus quam, ut auctor est efficitur eu. Donec scelerisque elit dolor, elementum aliquet erat bibendum quis. Nullam maximus sapien orci, vitae ullamcorper elit iaculis vel. Nulla ornare lacus ac porttitor cursus. Etiam tempus tempor urna, eget imperdiet dui ornare sed. Nam efficitur sapien non risus vestibulum, et scelerisque ipsum auctor. Cras non consequat tortor. Quisque non imperdiet mauris. 
+
+            Curabitur in fringilla tortor. Sed semper, lacus in consectetur placerat, urna elit blandit nisi, eu tempor odio mi non augue. Nunc euismod consectetur arcu eget tincidunt. Quisque fermentum at arcu et mattis. Nunc nec sapien vel sem fringilla ornare vel vel felis. Sed ut maximus dui. Suspendisse lobortis placerat sollicitudin. Duis commodo in massa tristique egestas. Nullam iaculis faucibus quam, ut auctor est efficitur eu. Donec scelerisque elit dolor, elementum aliquet erat bibendum quis. Nullam maximus sapien orci, vitae ullamcorper elit iaculis vel. Nulla ornare lacus ac porttitor cursus. Etiam tempus tempor urna, eget imperdiet dui ornare sed. Nam efficitur sapien non risus vestibulum, et scelerisque ipsum auctor. Cras non consequat tortor. Quisque non imperdiet mauris. 
+        </div>
+        </div>
+        <div class="menu">
+        <p>Menu</p>
+        <p>La position de ce menu est indépendante du défilement de la page.</p>
+        <p>Les différences de largeur dues au modèle de boîte incorrect d'Internet
+        Explorer Windows ne sont pas gérées dans cet exemple.</p>
+        </div>
+</body>
+
+</html>

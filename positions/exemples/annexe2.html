@@ -57,27 +57,27 @@
         <p>Code <acronym>HTML</acronym>:</p>
         <pre>
         &lt;div class="<var>verte5</var>"&gt;
-        &lt;p class="<var>jaune5</var>"&gt;<var>Une bo&icirc;te jaune flottant dot&eacute; d'un contenu plus long...</var>&lt;/p&gt;
-        &lt;p&gt;<var>Une bo&icirc;te verte</var>&lt;/p&gt;
-        &lt;div class="<var>spacer</var>"&gt;&nbsp;&lt;/div&gt;
+            &lt;p class="<var>jaune5</var>"&gt;<var>Une bo&icirc;te jaune flottant dot&eacute; d'un contenu plus long...</var>&lt;/p&gt;
+            &lt;p&gt;<var>Une bo&icirc;te verte</var>&lt;/p&gt;
+            &lt;div class="<var>spacer</var>"&gt;&nbsp;&lt;/div&gt;
         &lt;/div&gt;
         </pre>
         <p>Code <acronym>CSS</acronym>:</p>
         <pre>
         .jaune {
-        background-color: #ffff00;
-        float: right;
-        width: 100px;
-        text-align: center;
-        margin: 0;
-        }
+            background-color: #ffff00;
+            float: right;
+            width: 100px;
+            text-align: center;
+            margin: 0;
+            }
         .verte {
-        width: 100%;
-        background-color: #00ff00;
-        }
+            width: 100%;
+            background-color: #00ff00;
+            }
         .spacer {
-        clear: both;
-        }
+            clear: both;
+            }
         </pre>
         <p>R&eacute;sultat&nbsp;:</p>
         <div class="verte5">
@@ -194,29 +194,29 @@
         <p>Code <acronym>HTML</acronym>:</p>
         <pre>
         &lt;div class="conteneur"&gt;
-        &lt;p class="<var>flottante</var>"&gt;<var>bo&icirc;te verte 1</var>&lt;/p&gt;
-        &lt;p class="<var>flottante</var>"&gt;<var>bo&icirc;te verte 2</var>&lt;/p&gt;
-        &lt;p class="<var>flottante</var>"&gt;<var>bo&icirc;te verte 3</var>&lt;/p&gt;
-        <var>...etc...</var>
-        &lt;hr /&gt;
+            &lt;p class="<var>flottante</var>"&gt;<var>bo&icirc;te verte 1</var>&lt;/p&gt;
+            &lt;p class="<var>flottante</var>"&gt;<var>bo&icirc;te verte 2</var>&lt;/p&gt;
+            &lt;p class="<var>flottante</var>"&gt;<var>bo&icirc;te verte 3</var>&lt;/p&gt;
+            <var>...etc...</var>
+            &lt;hr /&gt;
         &lt;/div&gt;
         </pre>
         <p>Code <acronym>CSS</acronym>:</p>
         <pre>
         .flottante {
-        background-color: #00ff00;
-        margin: 2px;
-        float: left;
-        width: 100px;
-        text-align: center;
-        }
+            background-color: #00ff00;
+            margin: 2px;
+            float: left;
+            width: 100px;
+            text-align: center;
+            }
         .conteneur {
-        width: 100%;
-        }
+            width: 100%;
+            }
         hr {
-        clear: both;
-        visibility: hidden;
-        }
+            clear: both;
+            visibility: hidden;
+            }
         </pre>
         <p>R&eacute;sultat&nbsp;:</p>
         <div class="conteneur">
@@ -231,6 +231,44 @@
         <p class="flottante">bo&icirc;te verte<br />9</p>
         <p class="flottante">bo&icirc;te verte<br />10</p>
         <hr class="spacerhr" />
+        </div>
+        <h2 id="ex7">Vignettes flottantes et s&eacute;parateur <code>div</code> invisible</h2>
+        <p>Code <acronym>HTML</acronym>:</p>
+        <pre>
+        &lt;div class="conteneur"&gt;
+            &lt;p class="<var>flottante</var>"&gt;<var>bo&icirc;te verte 1</var>&lt;/p&gt;
+            &lt;p class="<var>flottante</var>"&gt;<var>bo&icirc;te verte 2</var>&lt;/p&gt;
+            &lt;p class="<var>flottante</var>"&gt;<var>bo&icirc;te verte 3</var>&lt;/p&gt;
+            <var>...etc...</var>
+            &lt;div style="clear:both""&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        </pre>
+        <p>Code <acronym>CSS</acronym>:</p>
+        <pre>
+        .flottante {
+            background-color: #00ff00;
+            margin: 2px;
+            float: left;
+            width: 100px;
+            text-align: center;
+            }
+        .conteneur {
+            width: 100%;
+            }
+        </pre>
+        <p>R&eacute;sultat&nbsp;:</p>
+        <div class="conteneur">
+        <p class="flottante">bo&icirc;te verte<br />1</p>
+        <p class="flottante">bo&icirc;te verte<br />2</p>
+        <p class="flottante">bo&icirc;te verte<br />3</p>
+        <p class="flottante">bo&icirc;te verte<br />4</p>
+        <p class="flottante">bo&icirc;te verte<br />5</p>
+        <p class="flottante">bo&icirc;te verte<br />6</p>
+        <p class="flottante">bo&icirc;te verte<br />7</p>
+        <p class="flottante">bo&icirc;te verte<br />8</p>
+        <p class="flottante">bo&icirc;te verte<br />9</p>
+        <p class="flottante">bo&icirc;te verte<br />10</p>
+        <div style="clear:both"/>
         </div>
         </div>
 </body>

@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+
+<head>
+    <title>Annexe 1</title>
+    <link rel="stylesheet" href="annexe1.css">
+</head>
+
+<body>
+    <div class="page">
+        <h1>Positionnement absolu et relatif - Exemples</h1>
+        <h2 id="ex1">Position absolue et chevauchement</h2>
+        <p>Code <acronym>HTML</acronym>:</p>
+        <pre>
+    &lt;div class="<var>verte</var>"&gt;
+        &lt;p&gt;
+            <var>...</var>
+        &lt;/p&gt;
+        &lt;p class="<var>jaune</var>"&gt;<var>Boîte en position absolue</var>&lt;/p&gt;
+    &lt;/div&gt;
+        </pre>
+        <p>Code <acronym>CSS</acronym>:</p>
+        <pre>
+    .verte {
+        position: relative;
+        background-color: <var>#00ff00</var>;
+        width: <var>15em</var>;
+        }
+    .jaune {
+        position: absolute;
+        top: <var>1em</var>;
+        right: <var>1em</var>;
+        background-color: <var>#ffff00</var>;
+        }
+        </pre>
+        <p>Résultat&nbsp;:</p>
+        <div class="verte6">
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.</p>
+        <p class="jaune6">Boîte en position absolue</p>
+        </div>
+        
+        <h2 id="ex2">Position absolue dans un espace réservé en haut</h2>
+        <p>Code <acronym>HTML</acronym>:</p>
+        <pre>
+    &lt;div class="<var>verte</var>"&gt;
+        &lt;p&gt;
+            <var>...</var>
+        &lt;/p&gt;
+        &lt;p class="<var>jaune</var>"&gt;<var>Boîte en position absolue</var>&lt;/p&gt;
+    &lt;/div&gt;
+        </pre>
+        <p>Code <acronym>CSS</acronym>:</p>
+        <pre>
+    .verte {
+        position: relative;
+        background-color: <var>#00ff00</var>;
+        width: <var>15em</var>;
+        padding-top: <var>5em</var>;
+        }
+    .jaune {
+        position: absolute;
+        top: <var>1em</var>;
+        right: <var>1em</var>;
+        background-color: <var>#ffff00</var>;
+        }
+        </pre>
+        <p>Résultat&nbsp;:</p>
+        <div class="verte7">
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.</p>
+        <p class="jaune6">Boîte en position absolue</p>
+        </div>
+        
+        <h2 id="ex3">Position absolue dans un espace réservé à droite</h2>
+        <p>Code <acronym>HTML</acronym>:</p>
+        <pre>
+    &lt;div class="<var>verte</var>"&gt;
+        &lt;p&gt;
+            <var>...</var>
+        &lt;/p&gt;
+        &lt;p class="<var>jaune</var>"&gt;<var>Boîte en position absolue</var>&lt;/p&gt;
+    &lt;/div&gt;
+        </pre>
+        <p>Code <acronym>CSS</acronym>:</p>
+        <pre>
+    .verte {
+        position: relative;
+        background-color: <var>#00ff00</var>;
+        width: <var>15em</var>;
+        padding-right: 7em;
+        }
+    .jaune {
+        position: absolute;
+        top: <var>1em</var>;
+        right: <var>1em</var>;
+        background-color: <var>#ffff00</var>;
+        width: 4em;
+        }
+        </pre>
+        <p>Résultat&nbsp;:</p>
+        <div class="verte8">
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.</p>
+        <p class="jaune8">Boîte en position absolue</p>
+        </div>
+    
+</body>
+
+</html>

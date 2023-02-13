@@ -40,42 +40,264 @@
 <div>
   <img src="/positions/img/ex5.gif" alt="Le texte de la boîte verte passe à la ligne à hauteur de la boîte jaune"/>
 </div>
-<p>Le navigateur <em>place</em> tout d'abord la boîte jaune, alignée sur le bord droit de cette partie de notre page, puis reprend le cours normal du flux dans l'espace laissé libre à sa gauche pour afficher la boîte verte. Le flux occupe tout l'espace disponible: la boîte verte reprend donc toute la largeur de la page sitôt <em>passée</em> la limite inférieure de la boîte flottante jaune.</p>
+    <p>
+        Le navigateur <em>place</em> tout d'abord la boîte jaune, alignée sur le bord droit de cette partie de notre page, puis reprend le cours normal du flux dans l'espace laissé libre à sa gauche pour afficher la boîte verte. Le flux occupe tout l'espace disponible: la boîte verte reprend donc toute la largeur de la page sitôt <em>passée</em> la limite inférieure de la boîte flottante jaune.
+    </p>
 
-<p>Dans les navigateurs n'appliquant pas la feuille de style (navigateurs texte ou non conformes aux standards…), la boîte flottante sera simplement inscrite en flux normal avant la boîte qui la suit.</p>
+    <p>
+        Dans les navigateurs n'appliquant pas la feuille de style (navigateurs texte ou non conformes aux standards…), la boîte flottante sera simplement inscrite en flux normal avant la boîte qui la suit.
+    </p>
 <h3 id="deuxcolonnes">Première utilisation : une mise en page à deux colonnes</h3>
-<p>La combinaison de la position flottante et du flux permet de réaliser aisément une mise en page à deux colonnes (un contenu et un menu) :</p>
+    <p>
+        La combinaison de la position flottante et du flux permet de réaliser aisément une mise en page à deux colonnes (un contenu et un menu) :
+    </p>
 <p>En <acronym>CSS</acronym> :</p>
 <pre>
-.content {
-float: left;
-width: 70%;
-}
-.menu {
-margin-left: 80%;
-border: 1px solid #000000;
-padding: 1em;
-}
+    .content {
+        float: left;
+        width: 70%;
+        }
+    .menu {
+        margin-left: 80%;
+        border: 1px solid #000000;
+        padding: 1em;
+        }
 </pre>
 
 <p>Et en <acronym>HTML</acronym> :</p>
 <pre>
-…
-&lt;body&gt;
-&lt;div class="content"&gt;
-…
-&lt;/div&gt;
+    …
+    &lt;body&gt;
+            &lt;div class="content"&gt;
+            …
+        &lt;/div&gt;
 
-&lt;div class="menu"&gt;
-&lt;ul&gt;
-&lt;li&gt;lien_1&lt;/li&gt;
-&lt;li&gt;lien_2&lt;/li&gt;
-&lt;li&gt;lien_3&lt;/li&gt;
+        &lt;div class="menu"&gt;
+            &lt;ul&gt;
+                &lt;li&gt;lien_1&lt;/li&gt;
+                &lt;li&gt;lien_2&lt;/li&gt;
+                &lt;li&gt;lien_3&lt;/li&gt;
 
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/body&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
 </pre>
+    <p>Le résultat, illustré par la figure ci-dessous, peut être observé également dans <a href="/positions/exemples/annexe3.html">la page-exemple</a>
+    </p>
+<div>
+    <img src="/positions/img/ex15.gif" alt="Un menu dans la colonne droite flanquant le contenu de la page"/>
+</div>
+<h3>Seconde utilisation : une mise en page à trois colonnes et plus</h3>
+    <p>
+        Mais on peut tout aussi bien multiplier les flottants pour créer autant de colonnes que voulu :
+    </p>
+    <p>En <acronym>CSS</acronym> :</p>
+<pre>
+
+    body {
+        margin: 0;
+        padding: 0;
+        }
+    .float {
+        float: left;
+        width: 25%;
+        margin: 1em 0;
+        }
+    p,h1,h2 {
+        margin: 1em;
+        }
+</pre>
+<p>Et en <acronym>HTML</acronym> :</p>
+<pre>
+    …
+    &lt;body&gt;
+        …
+        &lt;div class="float"&gt;
+            …
+        &lt;/div&gt;
+        &lt;div class="float"&gt;
+            …
+        &lt;/div&gt;
+        &lt;div class="float"&gt;
+            …
+        &lt;/div&gt;
+        &lt;div class="float"&gt;
+            …
+        &lt;/div&gt;
+    &lt;/body&gt;
+</pre>
+<p>Le résultat, illustré par la figure ci-dessous, peut être observé également dans <a href="/positions/exemples/annexe4.html">la page-exemple</a> :</p>
+<div>
+    <img src="/positions/img/ex17.gif" alt="Sous le titre, 4 colonnes d'égale largeur."/>
+</div>
+<h3 id="spacer">Débordement et <em>spacer</em></h3>
+    <h4 id="probleme">Le problème du débordement</h4>
+    <p>
+        Reprenons notre exemple, mais inversons les contenus: celui de la boîte flottante jaune est à présent plus long que celui de la boîte verte :
+    </p>
+    <p>En <acronym>HTML</acronym> :</p>
+
+<pre>
+    &lt;p class="jaune"&gt;
+        Une boîte jaune flottant doté d'un contenu plus long…
+    &lt;/p&gt;
+    &lt;p class="verte"&gt;
+        Une boîte verte
+    &lt;/p&gt;
+</pre>
+<p>Le résultat, illustré par la figure ci-dessous, peut être observé également dans <a href="/positions/exemples/annexe2.html#ex2">l'exemple 2</a> :</p>
+
+<div>
+    <img src="/positions/img/ex6.gif" alt="La boîte jaune déborde vers le bas au-delà de la boîte verte"/>
+</div>
+<p>La boîte flottante, plus longue que la boîte verte, <em>déborde</em> verticalement plus bas que celle-ci.</p>
+<h4 id="solution">La solution : le <em>spacer</em>
+</h4>
+
+<p>
+    Pour éviter cet effet parfois disgracieux, la solution la plus répandue est le <em>spacer</em> : elle consiste à inclure dans la boîte verte un élément bloc au contenu fictif (l'espace insécable <code class="token">&nbsp;</code>), doté de la propriété <code class="token">clear</code> qui lui interdit d'être adjacent à une boîte flottante.
+</p>
+<p>En <acronym>HTML</acronym> :</p>
+
+<pre>
+    &lt;div class="verte5"&gt;
+        &lt;p class="jaune5"&gt;
+            Une boîte jaune flottant doté d'un contenu plus long…
+        &lt;/p&gt;
+        &lt;p&gt;
+            Une boîte verte
+        &lt;/p&gt;
+
+        &lt;div class="spacer"&gt;&nbsp;&lt;/div&gt;
+    &lt;/div&gt;
+</pre>
+<p>En <acronym>CSS</acronym> :</p>
+<pre>
+    .jaune {
+        background-color: #ffff00;
+        float: right;
+        width: 100px;
+        text-align: center;
+        margin: 0;
+        }
+    .verte {
+        width: 100%;
+        background-color: #00ff00;
+        }
+    .spacer {
+        clear: both;
+        }
+</pre>
+
+<p>
+    Le résultat, illustré par la figure ci-dessous, peut être observé également dans <a href="/positions/exemples/annexe2.html#ex3">l'exemple 3</a>
+</p>
+<div>
+  <img src="/positions/img/ex7.gif" alt="La boîte jaune ne déborde plus vers le bas au-delà de la boîte verte"/>
+</div>
+<p>Le bloc <em>spacer</em>, ne pouvant se placer <em>à côté</em> du bloc flottant, se trouve décalé <em>plus bas</em> que celui-ci.</p>
+
+<h4 id="vignettes">Les vignettes : une utilisation du <em>spacer</em> et des flottantes</h4>
+
+<p>
+  On peut, en particulier, appliquer cette solution à une série de boîtes flottantes placées dans une boîte conteneur dont le contenu propre se réduit au spacer : elle ne sert qu'à créer une boîte délimitant l'espace visuel où s'affichent les boîtes flottantes.
+</p>
+<p>En <acronym>CSS</acronym> :</p>
+<pre>
+    .flottante {
+        background-color: #00ff00;
+        border: 2px dotted #ffff00;
+        margin: 2px;
+        float: left;
+        width: 100px;
+        text-align: center;
+        }
+    .conteneur {
+        width: 100%;
+        }
+    .spacer {
+        clear: both;
+        }
+</pre>
+<p>En <acronym>HTML</acronym> :</p>
+
+<pre>
+    &lt;div&gt;
+        &lt;p class="flottante"&gt;boîte verte 1&lt;/p&gt;
+        &lt;p class="flottante"&gt;boîte verte 2&lt;/p&gt;
+        &lt;p class="flottante"&gt;boîte verte 3&lt;/p&gt;
+
+        …etc…
+        &lt;div class="spacer"&gt;&nbsp;&lt;/div&gt;
+    &lt;/div&gt;
+</pre>
+<p>On obtient une série de vignettes pouvant accueillir par exemple des images, les liens d'un menu de navigation, etc. ou encore permettant de réaliser une mise en page en colonnes… Elle s'adapte automatiquement à la largeur d'affichage disponible : faute de place à <em>droite</em>, une boîte flottante sera replacée <em>à la ligne</em>.</p>
+
+<p>
+    Le résultat, illustré par la figure ci-dessous, peut être observé également dans <a href="/positions/exemples/annexe2.html#ex4">l'exemple 4</a>
+</p>
+<div>
+    <img src="/positions/img/ex8.gif" alt="6 vignettes alignées de gauche à droite sur deux lignes"/>
+</div>
+<h4 id="hr">Une variante du <em>spacer</em> : <code class="token">&lt;hr /&gt;</code></h4>
+<p>
+    Le défaut du <em>spacer</em> est d'introduire dans le code <acronym>HTML</acronym> un contenu fictif à des fins de présentation…
+</p>
+<p>
+    Lorsque la boîte adjacente à la boîte flottante est suivie d'une coupure logique dans votre page (nouvelle section de texte…), il est préférable d'associer la propriété <code class="token">clear</code> à un contenu réel. La ligne horizontale créée par la balise <code class="token">&lt;hr /&gt;</code> peut jouer avantageusement ce rôle :
+</p>
+
+<p>En <acronym>HTML</acronym> :</p>
+<pre>
+    &lt;p class="jaune"&gt;
+        Une boîte jaune flottant doté d'un contenu plus long…
+    &lt;/p&gt;
+    &lt;p class="verte"&gt;
+        Une boîte verte
+    &lt;/p&gt;
+    &lt;hr /&gt;
+</pre>
+<p>En <acronym>CSS</acronym> :</p>
+<pre>
+    .jaune {
+        background-color: #ffff00;
+        float: right;
+        width: 100px;
+        margin: 0;
+        }
+    .verte {
+        background-color: #00ff00;
+        }
+    hr {
+        clear: both;
+        }
+</pre>
+<p>
+    Le résultat, illustré par la figure ci-dessous, peut être observé également dans <a href="/positions/exemples/annexe2.html#ex5">l'exemple 5</a>
+</p>
+<div>
+    <img src="/positions/img/ex9.gif" alt="La ligne horizontale en bas de la boîte verte empêche le débordement de la boîte jaune"/>
+</div>
+<p>
+    La ligne de séparation s'avère très utile pour les utilisateurs de navigateurs qui ne tiendront pas compte de la feuille de style (navigateurs textes, navigateurs périmés…) Il est possible de leur en réserver l'affichage, en le supprimant dans les navigateurs qui appliqueront la feuille de style, à l'aide de la propriété <code class="token">visibility: hidden;</code> : celle-ci rend un élément invisible, tout en le laissant agir sur le flux.
+</p>
+<pre>
+    hr {
+        clear: both;
+        visibility: hidden;
+        }
+</pre>
+
+<p>Le résultat (figure ci-dessous et <a href="/positions/exemples/annexe2.html#ex6">exemple 6</a>) est visuellement identique au <em>spacer</em> précédent.</p>
+<div>
+    <img src="/positions/img/ex7.gif" alt="La boîte jaune ne déborde plus vers le bas au-delà de la boîte verte"/>
+</div>
+<p>Et appliqué à la série de vignettes flottantes, le résultat, illustré par la figure ci-dessous, peut être observé également dans <a href="/positions/exemples/annexe2.html#ex7">l'exemple 7</a> :</p>
+
+<div>
+    <img src="/positions/img/ex8.gif" alt="6 vignettes alignées de gauche à droite sur deux lignes"/>
+</div>
+
 
 </body>
 </html>

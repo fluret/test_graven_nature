@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+
+<head>
+    <title>Annexe 1</title>
+    <link rel="stylesheet" href="annexe1.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="content">
+            <h1>Exemple d'utilisation des flottants dans un menu</h1>
+            <p>
+                Dans les navigateurs conformes au standard CSS2, cette page se pr&eacute;sente en deux colonnes: &agrave; gauche, le contenu principal, et &agrave; droite le menu. Le code correspondant est&nbsp;:
+            </p>
+            <p>En <acronym>CSS</acronym>&nbsp;:</p>
+        <pre>
+        .content {
+            float: left;
+            width: <var>70%</var>;
+            }
+        .menu {
+            margin-left: <var>80%</var>;
+            background-color: <var>#ffecce</var>;
+            border: 1px solid <var>#666666</var>;
+            padding: <var>1em</var>;
+            }
+        </pre>
+        <p>Et en <acronym>HTML</acronym>&nbsp;:</p>
+        <pre>
+        &lt;body&gt;
+        &lt;div class="<var>content</var>"&gt;
+        <var>...</var>
+        &lt;/div&gt;
+        &lt;div class="<var>menu</var>"&gt;
+        <var>...</var>
+        &lt;/div&gt;
+        &lt;/body&gt;
+        </pre>
+        </div>
+        <div class="menu">
+            <p>Menu</p>
+            <p>Le contenu de cette zone est en position flottante.</p>
+            <p>
+                Dans les navigateurs qui ne reproduisent pas les mises en page <acronym>CSS</acronym>, il s'affichera &agrave; la suite du contenu principal.
+            </p>
+        </div>
+        <div class="spacer">&nbsp;</div>
+        </div>
+    
+</body>
+
+</html>

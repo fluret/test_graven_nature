@@ -5,6 +5,9 @@ body {
     margin: 2em 1%;
     padding: 0;
     }
+    .spacer {
+        clear: both;
+        }
     .page {
     background-color: #f5f8fc;
     border: 3px solid #000000;
@@ -52,3 +55,53 @@ body {
     left: 3em;
     background-color: #ffff00;
     }
+    .content {
+        float: left;
+        width: 70%;
+        }
+    .menu {
+        margin-left: 80%;
+        background-color: #ffecce;
+        border: 1px solid #666666;
+        padding: 1em;
+        }
+    .float {
+        float: left;
+        width: 25%;
+        margin: 1em 0;
+        }
+    .float p, h2 {
+        margin: 1em;;
+        }
+    .verte6 {
+        position: relative;
+        background-color: #00ff00;
+        width: 15em;
+        }
+    .jaune6 {
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        background-color: #ffff00;
+        }
+    .verte7 {
+        position: relative;
+        background-color: #00ff00;
+        width: 15em;
+        padding-top: 5em;
+        }
+    .jaune8 {
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        background-color: #ffff00;
+        width: 4em;
+        }
+    .verte8 {
+        position: relative;
+        background-color: #00ff00;
+        width: 15em;
+        padding-right: 7em;
+        }
+
+    
