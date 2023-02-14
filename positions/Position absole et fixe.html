@@ -32,7 +32,8 @@
     </p>
     <ul>
         <li>une boîte <strong>elle-même positionnée</strong> (position relative ou absolue) ;</li>
-        <li>le bloc conteneur initial, à défaut de boîte positionnée, c'est-à-dire en pratique le plus souvent la fenêtre du navigateur.</li>
+        <li>le bloc conteneur initial, à défaut de boîte positionnée, c'est-à-dire en pratique le plus souvent la
+            fenêtre du navigateur.</li>
     </ul>
     <p>Définissons un conteneur vert en position relative :</p>
     <pre>
@@ -63,26 +64,30 @@
 
     &lt;/div&gt;
 </pre>
-    <p>Le résultat, illustré par la figure ci-dessous, peut être observé également dans <a href="/positions/exemples/annexe5.html#ex1">l'exemple 1</a> </p>
+    <p>Le résultat, illustré par la figure ci-dessous, peut être observé également dans <a
+            href="/positions/exemples/annexe5.html#ex1">l'exemple 1</a> </p>
     <div>
-      <img src="/positions/img/ex10.gif" alt="La boîte jaune recouvre une partie du contenu de la boîte verte"/>
+        <img src="/positions/img/ex10.gif" alt="La boîte jaune recouvre une partie du contenu de la boîte verte" />
     </div>
     <h3 id="remplissage">Ménager un espace pour la boîte en position absolue</h3>
 
-    <p>Inévitablement, la boîte en position absolue recouvre le contenu de notre paragraphe. Pour l'éviter, dotons la boîte conteneur verte d'un remplissage supérieur suffisant :</p>
+    <p>Inévitablement, la boîte en position absolue recouvre le contenu de notre paragraphe. Pour l'éviter, dotons la
+        boîte conteneur verte d'un remplissage supérieur suffisant :</p>
     <pre>
 .verte {
     padding-top: 5em;
     }
 </pre>
-<p>Le résultat, illustré par la figure ci-dessous, peut être observé également dans <a href="/positions/exemples/annexe5.html#ex2">l'exemple 2</a>
-</p>
-<div>
-  <img src="/positions/img/ex11.gif" alt="La boîte jaune occupe l'espace libre en haut de la boîte verte"/>
+    <p>Le résultat, illustré par la figure ci-dessous, peut être observé également dans <a
+            href="/positions/exemples/annexe5.html#ex2">l'exemple 2</a>
+    </p>
+    <div>
+        <img src="/positions/img/ex11.gif" alt="La boîte jaune occupe l'espace libre en haut de la boîte verte" />
 
-</div>
-<p>Nous pourrions aussi bien fixer la largeur de la boîte jaune et doter le texte de la boîte verte d'un remplissage à droite :</p>
-<pre>
+    </div>
+    <p>Nous pourrions aussi bien fixer la largeur de la boîte jaune et doter le texte de la boîte verte d'un remplissage
+        à droite :</p>
+    <pre>
 .verte {
     padding-right: 7em;
     }
@@ -90,16 +95,18 @@
     width: 4em;
     }
 </pre>
-<p>Le résultat, illustré par la figure ci-dessous, peut être observé également dans <a href="/positions/exemples/annexe5.html#ex3">l'exemple 3</a>
-</p>
-<div>
+    <p>Le résultat, illustré par la figure ci-dessous, peut être observé également dans <a
+            href="/positions/exemples/annexe5.html#ex3">l'exemple 3</a>
+    </p>
+    <div>
 
-  <img src="/positions/img/ex12.gif" alt="La boîte jaune occupe l'espace libre à droite de la boîte verte"/>
-</div>
-<h3 id="troiscolonnes">Utilisation : une mise en page à trois colonnes</h3>
-<p>La position absolue offre donc une alternative aux flottants pour réaliser des mises en pages à plusieurs colonnes. Le cas typique est celui des trois colonnes dont voici le code :</p>
-<p>En <acronym>CSS</acronym> :</p>
-<pre>
+        <img src="/positions/img/ex12.gif" alt="La boîte jaune occupe l'espace libre à droite de la boîte verte" />
+    </div>
+    <h3 id="troiscolonnes">Utilisation : une mise en page à trois colonnes</h3>
+    <p>La position absolue offre donc une alternative aux flottants pour réaliser des mises en pages à plusieurs
+        colonnes. Le cas typique est celui des trois colonnes dont voici le code :</p>
+    <p>En <acronym>CSS</acronym> :</p>
+    <pre>
 
 centre {
     margin: 1em 25%;
@@ -117,8 +124,8 @@ centre {
     width: 18%;
     }
 </pre>
-<p>En <acronym>HTML</acronym> :</p>
-<pre>
+    <p>En <acronym>HTML</acronym> :</p>
+    <pre>
 &lt;body&gt;
     &lt;div class="centre"&gt;
         …
@@ -133,15 +140,18 @@ centre {
 &lt;/body&gt;
 </pre>
 
-<p>Le résultat, illustré par la figure ci-dessous, peut être observé également dans <a href="/positions/exemples/annexe6.html">la page-exemple 1</a> :</p>
-<div>
-  <img src="/positions/img/ex19.gif" alt="Trois colonnes dans la largeur de la page"/>
-</div>
-<h3 id="fixe">La position fixe</h3>
-<p>Comme dans un positionnement absolu, le contenu concerné est retiré totalement du flux. Mais il est cette fois positionné uniquement par rapport aux limites de la zone de visualisation, autrement dit la fenêtre du navigateur. Le défilement de la page n'a aucun effet sur un contenu en position fixe.</p>
+    <p>Le résultat, illustré par la figure ci-dessous, peut être observé également dans <a
+            href="/positions/exemples/annexe6.html">la page-exemple 1</a> :</p>
+    <div>
+        <img src="/positions/img/ex19.gif" alt="Trois colonnes dans la largeur de la page" />
+    </div>
+    <h3 id="fixe">La position fixe</h3>
+    <p>Comme dans un positionnement absolu, le contenu concerné est retiré totalement du flux. Mais il est cette fois
+        positionné uniquement par rapport aux limites de la zone de visualisation, autrement dit la fenêtre du
+        navigateur. Le défilement de la page n'a aucun effet sur un contenu en position fixe.</p>
 
-Par exemple :</p>
-<pre>
+    Par exemple :</p>
+    <pre>
 .fixe {
     position: absolute;
     top: 10px;
@@ -151,12 +161,14 @@ html&gt;body .fixe {
     position: fixed;
     }
 </pre>
-<p>Tout comme le positionnement absolu, le positionnement fixe est susceptible de provoquer des chevauchements. On employera donc des méthodes similaires pour l'exploiter.</p>
-        <h3 id="menufixe">Utilisation : un menu fixe en colonne</h3>
+    <p>Tout comme le positionnement absolu, le positionnement fixe est susceptible de provoquer des chevauchements. On
+        employera donc des méthodes similaires pour l'exploiter.</p>
+    <h3 id="menufixe">Utilisation : un menu fixe en colonne</h3>
 
-        <p>Pour fixer un menu de navigation dans une colonne vide à gauche du contenu, on définira les largeurs du contenu et du menu :</p>
-        <p>En <acronym>CSS</acronym> :</p>
-        <pre>
+    <p>Pour fixer un menu de navigation dans une colonne vide à gauche du contenu, on définira les largeurs du contenu
+        et du menu :</p>
+    <p>En <acronym>CSS</acronym> :</p>
+    <pre>
 .content {
     width: 65%;
     border: 1px solid #000000;
@@ -187,18 +199,21 @@ html&gt;body .menu {
 
 &lt;/body&gt;
 </pre>
-    <p>Le résultat, illustré par la figure ci-dessous, peut être observé également dans <a href="/positions/exemples/annexe7.html">la page-exemple 2</a>
+    <p>Le résultat, illustré par la figure ci-dessous, peut être observé également dans <a
+            href="/positions/exemples/annexe7.html">la page-exemple 2</a>
     </p>
     <div>
-      <img src="/positions/img/ex15.gif" alt="Un menu fixe dans la colonne droite flanquant le contenu de la page"/>
+        <img src="/positions/img/ex15.gif" alt="Un menu fixe dans la colonne droite flanquant le contenu de la page" />
     </div>
     <h3 id="barrefixe">Utilisation : une barre de menu fixe</h3>
 
     <p>
-        Lorsqu'il s'agit de créer une mise en page avec contenu et menus, la position fixe a l'inconvénient apparent de sacrifier une partie de la largeur d'affichage disponible, pour éviter les chevauchements.
+        Lorsqu'il s'agit de créer une mise en page avec contenu et menus, la position fixe a l'inconvénient apparent de
+        sacrifier une partie de la largeur d'affichage disponible, pour éviter les chevauchements.
     </p>
     <p>
-        En fait, cet inconvénient disparaît sitôt qu'on tire profit du chevauchement au lieu de chercher à l'éviter. Imaginons une barre de menu horizontale, fixée en permanence en haut de la fenêtre d'affichage :</p>
+        En fait, cet inconvénient disparaît sitôt qu'on tire profit du chevauchement au lieu de chercher à l'éviter.
+        Imaginons une barre de menu horizontale, fixée en permanence en haut de la fenêtre d'affichage :</p>
     <p>En <acronym>CSS</acronym> :</p>
     <pre>
 .menufixe {
@@ -221,8 +236,8 @@ html&gt;body .menufixe {
     padding-top: 3em;
     }
 </pre>
-<p>En <acronym>HTML</acronym> :</p>
-<pre>
+    <p>En <acronym>HTML</acronym> :</p>
+    <pre>
 &lt;body&gt;
     &lt;div class="content"&gt;
         …
@@ -233,50 +248,96 @@ html&gt;body .menufixe {
     &lt;/p&gt;
 &lt;/body&gt;
 </pre>
-<p>Le résultat, illustré par la figure ci-dessous, peut être observé également dans <a href="/IMG/article47/annexe6.html">la page-exemple 3</a> :</p>
-<div>
-  <img src="/IMG/article47/ex18.gif" alt="Une barre de menu fixe en permanence en haut de la fenêtre du navigateur"/>
+    <p>Le résultat, illustré par la figure ci-dessous, peut être observé également dans <a
+            href="./exemples/annexe8.html">la page-exemple 3</a> :</p>
+    <div>
+        <img src="./img/ex17.gif" alt="Une barre de menu fixe en permanence en haut de la fenêtre du navigateur" />
+    </div>
+    <h3 id="fixeabsolue">Combinaisons des positions fixe et absolue</h3>
+    <p>Imaginons à présent deux menus différents, tous deux placés dans la même colonne :</p>
+    <ul>
+        <li>le premier sera fixe en haut de la colonne ;</li>
+        <li>le second sera en position absolue plus bas dans la même colonne.</li>
+    </ul>
 
-</div>
-<h3 id="fixeabsolue">Combinaisons des positions fixe et absolue</h3>
-<p>Imaginons à présent deux menus différents, tous deux placés dans la même colonne :</p>
-<ul>
-  <li>le premier sera fixe en haut de la colonne ;</li>
-  <li>le second sera en position absolue plus bas dans la même colonne.</li>
-</ul>
+    <p>La propriété <code class="token">CSS</code>
+        <code class="token">z-index</code> permet de spécifier le <em>niveau d'empilement</em> de chaque menu : avec un
+        <code class="token">z-index</code> supérieur à celui du menu fixe et un arrière-plan opaque, le menu en position
+        absolue masquera temporairement celui-ci lors du défilement de la page. Le code nécessaire est :
+    </p>
+    <p>En <acronym>CSS</acronym> :</p>
 
-<p>La propriété <code class="token">CSS</code>
-  <code class="token">z-index</code> permet de spécifier le <em>niveau d'empilement</em> de chaque menu : avec un <code class="token">z-index</code> supérieur à celui du menu fixe et un arrière-plan opaque, le menu en position absolue masquera temporairement celui-ci lors du défilement de la page. Le code nécessaire est :</p>
-<p>En <acronym>CSS</acronym> :</p>
-
-<pre>
+    <pre>
 .content {
-width: 65%;
-border: 1px solid #000000;
-padding: 1em 1%;
-}
+    width: 65%;
+    border: 1px solid #000000;
+    padding: 1em 1%;
+    }
 .menufixe {
-position: absolute;
-top: 1em;
-right: 2%;
-border: 1px solid #000000;
-padding: 1em;
-width: 18%;
-z-index: 2;
-}
+    position: absolute;
+    top: 1em;
+    right: 2%;
+    border: 1px solid #000000;
+    padding: 1em;
+    width: 18%;
+    z-index: 2;
+    }
 html&gt;body .menufixe {
-position: fixed;
-}
+    position: fixed;
+    }
 .menuabsolu {
-position: absolute;
-top: 15em;
-right: 1%;
-border: 1px solid #000000;
-padding: 1em;
-width: 20%;
-background-color: #ffffff;
-z-index: 3;
-}
+    position: absolute;
+    top: 15em;
+    right: 1%;
+    border: 1px solid #000000;
+    padding: 1em;
+    width: 20%;
+    background-color: #ffffff;
+    z-index: 3;
+    }
 </pre>
+    <p>En <acronym>HTML</acronym> :</p>
+    <pre>
+&lt;body&gt;
+&lt;div class="content"&gt;
+
+…
+&lt;/div&gt;
+&lt;div class="menu"&gt;
+…
+&lt;/div&gt;
+&lt;/body&gt;
+</pre>
+    <p>Le point délicat est, bien-sûr, le choix de la valeur donnée à la propriété <code class="token">top</code> du
+        menu en position absolu, afin d'être sûr qu'il n'empiète pas sur l'espace du menu en position fixe.</p>
+
+    <p>Le résultat, illustré par la figure ci-dessous, peut être observé également dans <a
+            href="./exemples/annexe9.html">la page-exemple</a> :</p>
+    <div>
+        <img src="./img/ex16.gif"
+            alt="Un menu fixe et un menu absolu dans la colonne droite flanquant le contenu de la page" />
+    </div>
+    <h3 id="conclusion">Conclusion</h3>
+    <p>
+        Le positionnement <acronym>CSS</acronym> donne donc toute liberté dans la mise en page. Comparée à l'utilisation des tableaux, cette technique offre des avantages essentiels :
+    </p>
+
+    <ul>
+        <li>gestion de la présentation à partir d'un document unique pour un nombre quelconque de pages ;</li>
+        <li>stricte séparation du contenu et de la présentation, d'où un contenu mieux structuré, dénué de balisage
+            superflu ;</li>
+        <li>meilleure accessibilité, le contenu pouvant être organisé correctement dans les navigateurs non graphiques,
+            tout en étant librement disposé dans les navigateurs graphiques ;</li>
+        <li>
+            <em>elasticité</em> des mises en page obtenues, qui s'adaptent plus facilement aux différentes
+            configurations des utilisateurs (taille de la zone d'affichage, règlages de tailles de caractères…) ;
+        </li>
+
+        <li>effets graphiques nouveaux, tels le recouvrement en position fixe/absolue.</li>
+    </ul>
+    </div>
+
+
 </body>
+
 </html>

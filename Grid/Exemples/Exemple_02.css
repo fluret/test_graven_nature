@@ -1,0 +1,19 @@
+.one {
+  grid-area: areaName;
+}
+
+.container {
+  display: grid;
+  grid-template-areas: 'areaName areaName areaName areaName areaName';
+  grid-gap: 10px;
+  background: #f14668;
+  padding: 10px;
+}
+
+.container > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 32px;
+  background: #ffd880;
+}
+

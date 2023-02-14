@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+
+<head>
+    <title>Annexe 8</title>
+    <link rel="stylesheet" href="annexe8.css">
+</head>
+
+<body>
+    <div class="content">
+        <h1>Exemple d'utilisation de la position fixe pour une barre de menu fixée en haut de la fenêtre d'affichage</h1>
+        <h2>code <acronym>CSS</acronym>&nbsp;:</h2>
+        <pre>
+    .menufixe {
+        position: absolute;
+        top: 0;
+        left: 1%;
+        width: 98%;
+        z-index: 2;
+        text-align: center;
+        background-color: #ffecce;
+        border: 1px solid #666666;
+        line-height: 2em;
+        margin: 0;
+        }
+    html>body .menufixe {
+        position: fixed
+        }
+    .content {
+        z-index: 1;
+        background-color: #f5f8fc;
+        border: 3px solid #000000;
+        margin: 0 2em;
+        }
+        </pre>
+        <h2>code <acronym>HTML</acronym>&nbsp;:</h2>
+        <pre>
+        &lt;body&gt;
+            &lt;div class="<var>content</var>"&gt;
+                <var>...</var>
+            &lt;/div&gt;
+            &lt;p class="<var>menufixe</var>"&gt;
+                <var>...</var>
+            &lt;/p&gt;
+        &lt;/body&gt;
+        </pre>
+        <h2>Lorem Ipsum</h2>
+        <p>
+            Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.
+        </p>
+        <p>
+            Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.
+        </p>
+        <p>
+            Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.
+        </p>
+        </div>
+        <p class="menufixe">lien 1 | lien 2 | lien 3 | lien 4 | lien 5</p>
+</body>
+
+</html>
