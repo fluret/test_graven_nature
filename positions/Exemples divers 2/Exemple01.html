@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang='fr'>
+<head>
+	<meta charset="utf-8">
+	<style>
+		div {
+			border: 2px solid black;
+			padding:1em;
+			border-radius:10px;
+			margin-top:1em;      
+		}
+		div#alterner {
+			background-color:orange;
+			/* Hors du Flux */
+			position: absolute;
+			left: 100px;
+			top: 400px;
+		}
+		div#in-flux {
+			background-color:#f3e472;      
+		}
+		/* Pour des taille de fenêtre < 650 px */
+		@media screen and (max-width: 650px) {
+			div#alterner {
+				/* Dans le Flux */
+				position: static;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div id='alterner'>
+		<p>LARGE position:absolute</p>
+		<p>SMALL position:static</p>
+	</div>
+	<div id='in-flux'>Je suis dans le flux et j'y reste</div>
+</body>
+</html>

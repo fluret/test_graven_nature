@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang='fr'>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        section {
+            width: 300px;
+        }
+
+        header {
+            /* position relative => ça ne change rien pour lui */
+            position: relative;
+            border: 2px solid black;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            background-color: orange;
+            line-height: 45px;
+            padding-left: 10px;
+        }
+
+        img {
+            /* position absolute => sa référence c'est la boite du header */
+            position: absolute;
+            /* décalage de 10px par rapport au bord droit (du header) */
+            right: 10px;
+            /* décalage de 5px par rapport au bord haut (du header) */
+            top: 5px;
+            cursor: pointer;
+        }
+
+        #main-box {
+            border-right: 2px solid black;
+            border-left: 2px solid black;
+            border-bottom: 2px solid black;
+            background-color: #f3e472;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <header>Titre de ma Boite<img src='square-cross-32.png' alt='Fermer la boite'></header>
+        <div id='main-box'>
+            <p>Enlever le relative et vous êtes positionné par rapport à la boîte du body</p>
+            <p>Mettre du contenu devant et constater que la croix continue de descendre.</p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, adipisci, cumque
+            obcaecati perferendis accusamus nulla itaque nihil odio laudantium autem.
+            <p>Prenez les outils de dev CTRL+SHIFT+I puis cibler le header. Décochez le position:relative et constatez que l'image va se positionner par rapport au bord droit de la fenêtre donc du body (complètement à droite).</p>
+        </div>
+    </section>
+</body>
+
+</html>

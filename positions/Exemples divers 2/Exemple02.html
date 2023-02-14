@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang='fr'>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        #conteneur {
+            background-color: #f3e472;
+            width: 400px;
+            border: 2px solid black;
+            /* Il me faut une marge pour éviter le chevauchement */
+            /* de l'étiquette sur le h1 du header */
+            margin-top: 50px;
+            text-align: justify;
+        }
+
+        #etiquette {
+            /* Je positionne l'élément puis je place des décalages */
+            position: relative;
+            bottom: 2rem;
+            left: 3rem;
+            border: 2px solid black;
+            /* Il faut du inline-block pour que le div ait la taille de son contenu */
+            display: inline-block;
+            background-color: orange;
+            border-radius: 10px;
+            padding: 1rem;
+        }
+
+        #conteneur p:nth-child(2) {
+            margin-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>Mon header</header>
+    <div id='conteneur'>
+        <div id='etiquette'>Label de la boite</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, commodi consequatur error excepturi enim
+            sed ab hic laudantium eveniet animi. Temporibus, velit neque natus delectus consequatur ipsum corporis quis
+            veniam
+            praesentium nesciunt reiciendis cupiditate ratione ex possimus doloremque excepturi debitis laudantium
+            tenetur minus soluta commodi mollitia alias sed aspernatur similique consectetur obcaecati. Iste, commodi
+            ab facilis.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, necessitatibus.</p>
+    </div>
+</body>
+
+</html>
