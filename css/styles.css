@@ -189,35 +189,35 @@ nav.nav li a{
 }
 
 .plant-grid1 {
-    background-image: url(/images/nos_plantes/1.jpg);
+    background-image: url(../images/nos_plantes/1.jpg);
     grid-column: 1/3;
     grid-row: 1/3;
 }
 
 .plant-grid2 {
-    background-image: url(/images/nos_plantes/2.jpg);
+    background-image: url(../images/nos_plantes/2.jpg);
     grid-column: 3/5;
 }
 
 .plant-grid3 {
-    background-image: url(/images/nos_plantes/3.jpg);
+    background-image: url(../images/nos_plantes/3.jpg);
     grid-column: 3/5;
 }
 
 .plant-grid4 {
-    background-image: url(/images/nos_plantes/4.jpg);
+    background-image: url(../images/nos_plantes/4.jpg);
     grid-column: 1;
     grid-row: 3/5;
 }
 
 .plant-grid5 {
-    background-image: url(/images/nos_plantes/5.jpg);
+    background-image: url(../images/nos_plantes/5.jpg);
     grid-column: 2/4;
     grid-row: 3/5;
 }
 
 .plant-grid6 {
-    background-image: url(/images/nos_plantes/6.jpg);
+    background-image: url(../images/nos_plantes/6.jpg);
     grid-column: 4;
     grid-row: 3/5;
 }
